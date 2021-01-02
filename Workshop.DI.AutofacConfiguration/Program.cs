@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Runtime.Loader;
 using Autofac;
 using Autofac.Configuration;
@@ -15,7 +14,7 @@ namespace Workshop.DI.AutofacConfiguration
         {
             var execFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
 
-            AssemblyLoadContext.Default.Resolving += (AssemblyLoadContext context, AssemblyName assembly) =>
+            AssemblyLoadContext.Default.Resolving += (context, assembly) =>
                 context.LoadFromAssemblyPath(Path.Combine(execFolder!, $"{assembly.Name}.dll"));
 
             var config = new ConfigurationBuilder()
