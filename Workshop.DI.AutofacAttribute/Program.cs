@@ -1,4 +1,7 @@
 ﻿using System;
+using Autofac;
+using Workshop.DI.AutofacAttribute.Autofac;
+using Workshop.DI.AutofacAttribute.Facade;
 
 namespace Workshop.DI.AutofacAttribute
 {
@@ -6,7 +9,18 @@ namespace Workshop.DI.AutofacAttribute
     {
         private static void Main()
         {
-            Console.WriteLine("Hello World!");
+            var container = ComponentContainer.Configure();
+
+            using (var scope = container.BeginLifetimeScope())
+            {
+                var client = scope.Resolve<IClient>();
+                client.Request();
+            }
+
+
+
+            // exit:
+            Console.ReadKey();
         }
     }
 }
