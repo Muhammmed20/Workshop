@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Reflection;
 using Workshop.DI.AutofacContainer.Business;
+using Workshop.DI.AutofacContainer.Domain;
+using Workshop.DI.AutofacContainer.Utilities;
 
 namespace Workshop.DI.AutofacContainer.Facade.Autofac
 {
@@ -11,20 +13,14 @@ namespace Workshop.DI.AutofacContainer.Facade.Autofac
         {
             var builder = new ContainerBuilder();
 
-            //builder.RegisterType<Application>().As<IApplication>();
+            builder.RegisterType<Logger>().As<ILogger>();
+            builder.RegisterType<DataAccess>().As<IDataAccess>();
             builder.RegisterType<LogicB>().As<ILogic>();
+            builder.RegisterType<Application>().As<IApplication>();
 
-            builder.RegisterAssemblyTypes(Assembly.Load(nameof(Workshop.DI.AutofacContainer)))
-                .Where(t => t.Namespace != null && t.Namespace.Contains("Utilities"))
-                .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
-
-            builder.RegisterAssemblyTypes(Assembly.Load(nameof(Workshop.DI.AutofacContainer)))
-                .Where(t => t.Namespace != null && t.Namespace.Contains("Domain"))
-                .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
-
-            builder.RegisterAssemblyTypes(Assembly.Load(nameof(Workshop.DI.AutofacContainer)))
-                .Where(t => t.Namespace != null && t.Namespace.Contains("Facade"))
-                .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
+            //builder.RegisterAssemblyTypes(Assembly.Load(nameof(ExternalProjectName)))
+            //    .Where(t => t.Namespace != null && t.Namespace.Contains("Utilities"))
+            //    .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
 
             return builder.Build();
         }

@@ -21,7 +21,7 @@ namespace Workshop.DI.AutofacContainer.Business
             Console.WriteLine("Processing..");
 
             _dataAccess.LoadData();
-            _dataAccess.SaveData("ProcessedInfo");
+            _dataAccess.SaveData("Info: Logic A");
 
             _logger.Log("Process finished.");
         }
