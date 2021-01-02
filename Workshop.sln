@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.DI.AutofacConfigur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.DI.AutofacContainer", "Workshop.DI.AutofacContainer\Workshop.DI.AutofacContainer.csproj", "{2D1F318B-638E-4D0E-BD9F-F40E7F94D6EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.DI.AutofacAttribute", "Workshop.DI.AutofacAttribute\Workshop.DI.AutofacAttribute.csproj", "{F425ED86-A7EF-45DB-A910-15A50573493C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2D1F318B-638E-4D0E-BD9F-F40E7F94D6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D1F318B-638E-4D0E-BD9F-F40E7F94D6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D1F318B-638E-4D0E-BD9F-F40E7F94D6EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F425ED86-A7EF-45DB-A910-15A50573493C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F425ED86-A7EF-45DB-A910-15A50573493C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F425ED86-A7EF-45DB-A910-15A50573493C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F425ED86-A7EF-45DB-A910-15A50573493C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
