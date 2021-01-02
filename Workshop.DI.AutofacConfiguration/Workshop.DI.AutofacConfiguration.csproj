@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="autofac_config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <ItemGroup>
+      <PluginAssembly Include="$(SolutionDir)\src\Workshop.DI.AutofacConfiguration\bin\$(ConfigurationName)\**\Workshop.DI.AutofacConfiguration.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PluginAssembly)" DestinationFolder="$(OutDir)" />
+  </Target>
+
+</Project>

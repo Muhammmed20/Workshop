@@ -1,0 +1,24 @@
+{
+  "defaultAssembly": "Workshop.DI.AutofacConfiguration",
+  "components": [
+    {
+      "type": "Workshop.DI.AutofacConfiguration.ComponentA",
+      "services": [
+        {
+          "type": "Workshop.DI.AutofacConfiguration.ComponentA"
+        },
+        {
+          "type": "Workshop.DI.AutofacConfiguration.IComponent, Workshop.DI.AutofacConfiguration"
+        }
+      ]
+    },
+    {
+      "type": "Workshop.DI.AutofacConfiguration.ComponentB, Workshop.DI.AutofacConfiguration",
+      "services": [
+        {
+          "type": "Workshop.DI.AutofacConfiguration.IComponent, Workshop.DI.AutofacConfiguration"
+        }
+      ]
+    }
+  ]
+}
