@@ -3,7 +3,7 @@ using Autofac;
 
 namespace Workshop.DI.AutofacAttribute.Autofac.RegistrationTypes
 {
-    public class InstancePerApiRequest : RegistrationAttribute
+    public class InstancePerApiRequest : RegistrationAttribute, IDependencyComponent
     {
         internal override void Register(ContainerBuilder builder, Type type)
         {

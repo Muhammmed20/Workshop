@@ -1,8 +1,7 @@
 ﻿using Autofac;
-using Workshop.DI.AutofacAttribute.Utilities.Autofac;
-using Workshop.DI.AutofacAttribute.Utilities.Autofac.Classifiers.Concrete;
+using Workshop.DI.AutofacAttribute.Autofac.SampleUsages.Concrete;
 
-namespace Workshop.DI.AutofacAttribute
+namespace Workshop.DI.AutofacAttribute.Autofac.SampleUsages
 {
     public class MultiRegistrationFixture : RegistrationFixture
     {

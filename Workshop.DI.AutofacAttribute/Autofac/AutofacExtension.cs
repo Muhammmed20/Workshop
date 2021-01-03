@@ -2,7 +2,7 @@
 using System.Reflection;
 using Autofac;
 
-namespace Workshop.DI.AutofacAttribute.Utilities.Autofac
+namespace Workshop.DI.AutofacAttribute.Autofac
 {
     public static class AutofacExtension
     {
@@ -11,10 +11,10 @@ namespace Workshop.DI.AutofacAttribute.Utilities.Autofac
             var registrations = from assembly in assemblies
                 from type in assembly.GetTypes()
                 from attribute in type.GetCustomAttributes(false)
-                where attribute is AutofacRegistrationAttribute
+                where attribute is RegistrationAttribute
                 select new
                 {
-                    Attribute = (AutofacRegistrationAttribute)attribute,
+                    Attribute = (RegistrationAttribute)attribute,
                     Type = type
                 };
 
