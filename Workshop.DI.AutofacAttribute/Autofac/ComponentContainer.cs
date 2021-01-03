@@ -9,15 +9,10 @@ namespace Workshop.DI.AutofacAttribute.Autofac
         public static IContainer Configure()
         {
             var builder = new ContainerBuilder();
-
-            //builder.RegisterAssemblyTypes(Assembly.Load(nameof(ExternalProjectName)))
-            //    .Where(t => t.Namespace != null && t.Namespace.Contains("Utilities"))
-            //    .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
-
-
+            var a = AppDomain.CurrentDomain.GetAssemblies();
             builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
                 .Where(t => t.GetCustomAttribute<ComponentAttribute>() != null)
-                .AsImplementedInterfaces()/*.InstancePerRequest()*/;
+                .AsImplementedInterfaces();
 
             return builder.Build();
         }

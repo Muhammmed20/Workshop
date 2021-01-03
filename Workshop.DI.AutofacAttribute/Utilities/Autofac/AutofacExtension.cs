@@ -8,8 +8,8 @@ namespace Workshop.DI.AutofacAttribute.Utilities.Autofac
     {
         public static void RegisterByAttributes(this ContainerBuilder builder, params Assembly[] assemblies)
         {
-            var registrations = from a in assemblies
-                from type in a.GetTypes()
+            var registrations = from assembly in assemblies
+                from type in assembly.GetTypes()
                 from attribute in type.GetCustomAttributes(false)
                 where attribute is AutofacRegistrationAttribute
                 select new

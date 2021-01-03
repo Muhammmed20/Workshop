@@ -9,14 +9,11 @@ namespace Workshop.DI.AutofacAttribute
     {
         private static void Main()
         {
-            var container = ComponentContainer.Configure();
-
-            using (var scope = container.BeginLifetimeScope())
+            using (var container = ComponentContainer.Configure())
             {
-                var client = scope.Resolve<IClient>();
+                var client = container.Resolve<IClient>();
                 client.Request();
             }
-
 
 
             // exit:
