@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Workshop.DI.AutofacAttribute.Utilities.Autofac;
 
 namespace Workshop.DI.AutofacAttribute.Autofac
 {
@@ -7,7 +6,7 @@ namespace Workshop.DI.AutofacAttribute.Autofac
     {
         protected IContainer Container;
 
-        protected void GivenTheContainerIsBuilt()
+        protected void BuildContainer()
         {
             var builder = new ContainerBuilder();
             builder.RegisterByAttributes(typeof(IDependencyComponent).Assembly);

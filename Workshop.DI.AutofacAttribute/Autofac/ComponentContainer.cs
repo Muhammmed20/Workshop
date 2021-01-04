@@ -10,7 +10,7 @@ namespace Workshop.DI.AutofacAttribute.Autofac
         {
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
-                .Where(t => t.GetCustomAttribute<ComponentAttribute>() != null)
+                .Where(t => t.GetCustomAttribute<RegistrationAttribute>() != null)
                 .AsImplementedInterfaces();
 
             return builder.Build();
