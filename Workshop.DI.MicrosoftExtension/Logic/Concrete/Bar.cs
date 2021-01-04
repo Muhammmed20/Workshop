@@ -6,12 +6,12 @@ namespace Workshop.DI.MicrosoftExtension.Logic.Concrete
 {
     public class Bar : IBar
     {
-        private readonly ILogger<Foo> _logger;
+        private readonly ILogger<Bar> _logger;
         private readonly IConfiguration _config;
 
         private readonly IFoo _foo;
 
-        public Bar(ILogger<Foo> logger, IConfiguration config, IFoo foo)
+        public Bar(ILogger<Bar> logger, IConfiguration config, IFoo foo)
         {
             _logger = logger;
             _config = config;
