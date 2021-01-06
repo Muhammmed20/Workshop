@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workshop.DI.AutofacContaine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workshop.DI.AutofacAttribute", "Workshop.DI.AutofacAttribute\Workshop.DI.AutofacAttribute.csproj", "{F425ED86-A7EF-45DB-A910-15A50573493C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.DI.MicrosoftExtension", "Workshop.DI.MicrosoftExtension\Workshop.DI.MicrosoftExtension.csproj", "{397C49B9-909C-47DE-A795-86330E9873DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workshop.DI.MicrosoftExtension", "Workshop.DI.MicrosoftExtension\Workshop.DI.MicrosoftExtension.csproj", "{397C49B9-909C-47DE-A795-86330E9873DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specifications.Attributes", "Specifications.Attributes\Specifications.Attributes.csproj", "{38118DBC-5889-4021-9289-700F8886CA5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{397C49B9-909C-47DE-A795-86330E9873DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{397C49B9-909C-47DE-A795-86330E9873DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{397C49B9-909C-47DE-A795-86330E9873DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38118DBC-5889-4021-9289-700F8886CA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38118DBC-5889-4021-9289-700F8886CA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38118DBC-5889-4021-9289-700F8886CA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38118DBC-5889-4021-9289-700F8886CA5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
