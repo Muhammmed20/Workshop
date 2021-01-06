@@ -8,20 +8,18 @@ namespace Specifications.Attributes.ConsoleDesign
     {
         public static void Build()
         {
-            Console.WriteLine("Fetching devices");
-            var devices = LoadDevices();
             Console.WriteLine("Outputting current status of all devices...");
+            var devices = LoadDevices();
 
-            Console.ForegroundColor = ConsoleColor.Black;
-            foreach (var d in devices)
+            foreach (var device in devices)
             {
 
-                Console.BackgroundColor = d.Status.GetBackgroundColor();
-                Console.ForegroundColor = d.Status.GetForegroundColor();
-                Console.WriteLine($"Device {d.IpAddress} Status={d.Status}");
+                Console.BackgroundColor = device.Status.GetBackgroundColor();
+                Console.ForegroundColor = device.Status.GetForegroundColor();
+                Console.WriteLine($"Device : {device.IpAddress}, Status = {device.Status}");
             }
-            Console.ResetColor();
 
+            Console.ResetColor();
             Console.ReadKey();
         }
 
@@ -48,6 +46,11 @@ namespace Specifications.Attributes.ConsoleDesign
                 {
                     IpAddress="10.1.187.57",
                     Status = DeviceStatus.RegistrationFailed
+                },
+                new Device()
+                {
+                    IpAddress="10.1.187.75",
+                    Status = DeviceStatus.FoundAndRegistered
                 }
             };
         }
